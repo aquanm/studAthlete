@@ -1,0 +1,72 @@
+import java.util.*;
+class Main {
+
+  public static void main(String[] args) {
+    Map<String, Integer> stuAthlete = new HashMap<>();
+    stuAthlete.put("Paul", 60);
+    stuAthlete.put("David", 45);
+    stuAthlete.put("Liam", 50);
+    stuAthlete.put("Anna", 80);
+    stuAthlete.put("Leah", 65);
+    stuAthlete.put("Monica", 77);
+    stuAthlete.put("Mike", 88);
+
+    System.out.println(stuAthlete.entrySet());
+    
+    for(Map.Entry<String, Integer>  getgrades: stuAthlete.entrySet())
+      do {  
+        if(getgrades.getValue() < 50){
+         System.out.println("Student " + getgrades.getKey() + ", has a grade of " + getgrades.getValue() + " and is eliglble not to play");
+      }else { 
+      System.out.println("Student " + getgrades.getKey() + ", has a grade of " + getgrades.getValue() + " and is eliglble to play");
+           }
+        System.out.println();
+        
+        break; 
+      }while ((getgrades.getValue() > 0));
+
+          
+System.out.println("Enter student name");
+    Scanner sc = new Scanner(System.in);
+    String input = sc.nextLine();
+
+    System.out.println("Enter student sport");
+    String input3 = sc.nextLine();
+
+    switch (input3){
+      case ("soccer"):System.out.println(" that's alot of runing");
+          break;
+
+        case("basketball"):System.out.println("i bet you shot well");
+          break;
+
+        case ("baseball"):System.out.println("i bet you have a arm");
+          break;
+
+        case ("hockey"):System.out.println("gretzky is the best");
+          break;
+        
+    }
+      
+System.out.println("Enter student grade");
+int input2 = sc.nextInt();
+StdAthlete student = new StdAthlete(input,input2,input3);
+    System.out.println(student);
+    
+     
+    try{
+      if (input2 <= 0){
+      throw new Exception();}
+       if (input2>49){
+        student.play(); 
+        
+       } else {
+    student.suspend();
+        }
+      }catch(Exception e){
+        System.out.println("Please enter a valid positive integer.\n");  
+        } 
+  } 
+
+
+}
