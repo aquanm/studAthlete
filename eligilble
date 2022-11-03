@@ -1,0 +1,5 @@
+interface eligilble{
+void play();
+void suspend();
+  
+}
