@@ -1,0 +1,34 @@
+import java.util.*;
+public class StdAthlete extends Student implements eligilble {
+  
+private String sport;
+
+  
+public StdAthlete(String name, int grade, String sport){
+  super(name, grade);
+  this.sport= sport;
+}
+
+  public String getSport(){
+    return sport;
+  }
+
+  public void setSport(String sport){
+    this.sport=sport;
+  }
+  
+  @Override
+  public void play(){
+    System.out.println("Goodluck this seaon");
+  }
+
+  @Override public void suspend(){
+    System.out.println("Unfortunaly you cannot play this season");
+    
+  }
+public String toString(){
+    return "Welcome to our school " + this.name + "our " +this.sport + " program is one of the best in the country! \n";
+    
+  }
+
+} 
