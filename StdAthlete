@@ -27,7 +27,7 @@ public StdAthlete(String name, int grade, String sport){
     
   }
 public String toString(){
-    return "Welcome to our school " + this.name + "our " +this.sport + " program is one of the best in the country! \n";
+    return "Welcome to our school " + this.name + " our " +this.sport + " program is one of the best in the country! \n";
     
   }
 
